@@ -13,8 +13,8 @@ class About extends StatefulWidget {
 class _AboutState extends State<About> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 280,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25.0),
       child: Column(
         children: [
           Row(
@@ -23,7 +23,7 @@ class _AboutState extends State<About> {
               Text(
                 'Country : ',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 20,
                   color: text,
                   letterSpacing: 2,
                 ),
@@ -31,7 +31,7 @@ class _AboutState extends State<About> {
               Text(
                 'India',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 20,
                   color: text,
                   letterSpacing: 2,
                 ),
@@ -39,7 +39,7 @@ class _AboutState extends State<About> {
             ],
           ),
           const SizedBox(
-            height: 8,
+            height: 12,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,7 +47,7 @@ class _AboutState extends State<About> {
               Text(
                 'State : ',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 20,
                   color: text,
                   letterSpacing: 2,
                 ),
@@ -55,7 +55,7 @@ class _AboutState extends State<About> {
               Text(
                 'Delhi',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 20,
                   color: text,
                   letterSpacing: 2,
                 ),
@@ -63,7 +63,7 @@ class _AboutState extends State<About> {
             ],
           ),
           const SizedBox(
-            height: 8,
+            height: 12,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -71,7 +71,7 @@ class _AboutState extends State<About> {
               Text(
                 'Age : ',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 20,
                   color: text,
                   letterSpacing: 2,
                 ),
@@ -79,7 +79,7 @@ class _AboutState extends State<About> {
               Text(
                 '13',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 20,
                   color: text,
                   letterSpacing: 2,
                 ),
@@ -87,7 +87,7 @@ class _AboutState extends State<About> {
             ],
           ),
           const SizedBox(
-            height: 20,
+            height: 50,
           ),
         ],
       ),

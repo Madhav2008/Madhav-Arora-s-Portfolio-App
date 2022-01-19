@@ -18,21 +18,17 @@ class _DatabasesState extends State<Databases> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.only(left: 15.0),
-          child: Text(
-            'Databases',
-            style: TextStyle(
-              fontSize: 20,
-              color: highlighted,
-              letterSpacing: 2,
-            ),
+        const Text(
+          'Databases',
+          style: TextStyle(
+            fontSize: 27,
+            color: highlighted,
+            letterSpacing: 2,
           ),
         ),
         const SizedBox(
-          height: 20,
+          height: 40,
         ),
         Row(
           children: [

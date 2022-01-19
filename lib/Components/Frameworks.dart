@@ -18,21 +18,17 @@ class _FrameworksState extends State<Frameworks> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.only(left: 15.0),
-          child: Text(
-            'Frameworks',
-            style: TextStyle(
-              fontSize: 20,
-              color: highlighted,
-              letterSpacing: 2,
-            ),
+        const Text(
+          'Frameworks',
+          style: TextStyle(
+            fontSize: 27,
+            color: highlighted,
+            letterSpacing: 2,
           ),
         ),
         const SizedBox(
-          height: 20,
+          height: 40,
         ),
         Row(
           children: [

@@ -17,28 +17,21 @@ class _LanguagesState extends State<Languages> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.only(left: 15.0),
-          child: Text(
-            'Languages',
-            style: TextStyle(
-              fontSize: 27,
-              color: highlighted,
-              letterSpacing: 2,
-            ),
+        const Text(
+          'Languages',
+          style: TextStyle(
+            fontSize: 27,
+            color: highlighted,
+            letterSpacing: 2,
           ),
         ),
         const SizedBox(
           height: 40,
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const SizedBox(
-              width: 14,
-            ),
             Column(
               children: [
                 CircularPercentIndicator(
@@ -57,13 +50,13 @@ class _LanguagesState extends State<Languages> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 const Text(
                   'JavaScript',
                   style: TextStyle(
                     color: text,
-                    fontSize: 18,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
                   ),
@@ -91,13 +84,13 @@ class _LanguagesState extends State<Languages> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 const Text(
                   'HTML',
                   style: TextStyle(
                     color: text,
-                    fontSize: 18,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
                   ),
@@ -125,13 +118,13 @@ class _LanguagesState extends State<Languages> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 const Text(
                   'Python',
                   style: TextStyle(
                     color: text,
-                    fontSize: 18,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
                   ),
@@ -166,7 +159,7 @@ class _LanguagesState extends State<Languages> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 const Text(
                   '  Jupyter \nNotebook',
@@ -200,7 +193,7 @@ class _LanguagesState extends State<Languages> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 const Text(
                   'CSS',
@@ -234,7 +227,7 @@ class _LanguagesState extends State<Languages> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 const Text(
                   'Dart',
