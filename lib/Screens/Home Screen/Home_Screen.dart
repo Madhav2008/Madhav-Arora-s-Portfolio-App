@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, avoid_web_libraries_in_flutter, deprecated_member_use
 
 import 'dart:math';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:madhav_arora_portfolio/Components/Colourful_Animated_Back.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
@@ -480,7 +481,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
           child: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Banners(),
                 Column(
@@ -489,7 +489,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     Padding(
                       padding: const EdgeInsets.only(top: 30.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           AnimatedBuilder(
                             animation: _controller,
@@ -523,132 +522,143 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     const SizedBox(
                       height: 12,
                     ),
-                    const Text(
-                      "Madhav Arora",
-                      style: TextStyle(
-                        color: text,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 13,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                      child: Text(
-                        desc,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontSize: 16,
-                          color: lightText,
-                          fontWeight: FontWeight.w300,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    const Text(
-                      "Connect with me",
-                      style: TextStyle(
-                        color: text,
-                        fontSize: 14,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: GestureDetector(
-                            onTap: () async {
-                              linkedin();
-                            },
-                            child: Image.asset(
-                              "../assets/images/linkedin.png",
-                              width: 23,
-                              height: 23,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 16,
-                        ),
-                        MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: GestureDetector(
-                            onTap: () async {
-                              github();
-                            },
-                            child: Image.asset(
-                              "../assets/images/github.png",
-                              width: 35,
-                              height: 35,
-                              color: text,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 16,
-                        ),
-                        MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: GestureDetector(
-                            onTap: () async {
-                              gmail();
-                            },
-                            child: Image.asset(
-                              "../assets/images/gmail.png",
-                              width: 35,
-                              height: 35,
-                            ),
-                          ),
-                        ),
+                    ColorizeAnimatedTextKit(
+                      text: const [
+                        "Madhav Arora",
                       ],
+                      colors: const [
+                        Colors.red,
+                        Colors.pink,
+                        Colors.redAccent,
+                        Colors.pinkAccent,
+                      ],
+                      textStyle: const TextStyle(
+                        color: text,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 13,
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  child: Text(
+                    desc,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: lightText,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  "Connect with me",
+                  style: TextStyle(
+                    color: text,
+                    fontSize: 14,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                        onTap: () async {
+                          linkedin();
+                        },
+                        child: Image.asset(
+                          "../assets/images/linkedin.png",
+                          width: 23,
+                          height: 23,
+                        ),
+                      ),
                     ),
                     const SizedBox(
-                      height: 30,
+                      width: 16,
                     ),
                     MouseRegion(
                       cursor: SystemMouseCursors.click,
                       child: GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 24,
-                            vertical: 12,
-                          ),
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(30),
-                            ),
-                            gradient: LinearGradient(
-                              colors: [
-                                secondary,
-                                primary,
-                              ],
-                            ),
-                          ),
-                          child: const Text(
-                            "Download My Resume",
-                            style: TextStyle(color: text),
-                          ),
+                        onTap: () async {
+                          github();
+                        },
+                        child: Image.asset(
+                          "../assets/images/github.png",
+                          width: 35,
+                          height: 35,
+                          color: text,
                         ),
                       ),
                     ),
                     const SizedBox(
-                      height: 50,
+                      width: 16,
+                    ),
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                        onTap: () async {
+                          gmail();
+                        },
+                        child: Image.asset(
+                          "../assets/images/gmail.png",
+                          width: 35,
+                          height: 35,
+                        ),
+                      ),
                     ),
                   ],
                 ),
+                const SizedBox(
+                  height: 30,
+                ),
+                MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 24,
+                        vertical: 12,
+                      ),
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(30),
+                        ),
+                        gradient: LinearGradient(
+                          colors: [
+                            secondary,
+                            primary,
+                          ],
+                        ),
+                      ),
+                      child: const Text(
+                        "Download My Resume",
+                        style: TextStyle(color: text),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
               ],
             ),
+            // ],
           ),
         ),
+        // ),
       );
     }
   }

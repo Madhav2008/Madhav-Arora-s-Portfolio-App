@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
 import 'package:madhav_arora_portfolio/Screens/Profile%20Screen/Profile_Screen.dart';
@@ -37,7 +38,9 @@ class Banners extends StatelessWidget {
                         fontSize: 27,
                       ),
                 ),
-                const SizedBox(height: 40),
+                const SizedBox(height: 20),
+                const Texts(),
+                const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
@@ -71,8 +74,8 @@ class Banners extends StatelessWidget {
   }
 }
 
-class MyBuildAnimatedText extends StatelessWidget {
-  const MyBuildAnimatedText({
+class Texts extends StatelessWidget {
+  const Texts({
     Key? key,
   }) : super(key: key);
 
@@ -83,10 +86,40 @@ class MyBuildAnimatedText extends StatelessWidget {
       maxLines: 1,
       child: Row(
         children: const [
-          SizedBox(width: 20 / 2),
-          Text("I build "),
-          Expanded(child: AnimatedText()),
-          SizedBox(width: 20 / 2),
+          Text(
+            "<Madhav>",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: highlighted,
+              letterSpacing: 1,
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Text(
+            "I am a ",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: text,
+              letterSpacing: 1,
+            ),
+          ),
+          AnimatedText(),
+          SizedBox(
+            width: 10,
+          ),
+          Text(
+            "</Arora>",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: highlighted,
+              letterSpacing: 1,
+            ),
+          ),
         ],
       ),
     );
@@ -100,6 +133,141 @@ class AnimatedText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("Madhav Arora");
+    return AnimatedTextKit(
+      animatedTexts: [
+        TypewriterAnimatedText(
+          "Devloper.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+        TypewriterAnimatedText(
+          "Designer.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+        TypewriterAnimatedText(
+          "Coder.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+        TypewriterAnimatedText(
+          "Learner.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+        TypewriterAnimatedText(
+          "Devloper.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+        TypewriterAnimatedText(
+          "Designer.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+        TypewriterAnimatedText(
+          "Coder.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+        TypewriterAnimatedText(
+          "Learner.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+        TypewriterAnimatedText(
+          "Devloper.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+        TypewriterAnimatedText(
+          "Designer.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+        TypewriterAnimatedText(
+          "Coder.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+        TypewriterAnimatedText(
+          "Learner.",
+          textStyle: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: highlighted,
+            letterSpacing: 1,
+          ),
+          speed: const Duration(milliseconds: 200),
+          cursor: '',
+        ),
+      ],
+    );
   }
 }
