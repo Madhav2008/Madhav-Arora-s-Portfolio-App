@@ -204,7 +204,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 return Transform.translate(
                                   offset: const Offset(170, 0),
                                   child: Transform.rotate(
-                                    angle: _controller.value * 2 * pi / 2,
+                                    angle: _controller.value * 2,
                                     child: child,
                                   ),
                                 );
@@ -213,9 +213,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: ClipRRect(
-                                borderRadius:
-                                    const BorderRadius.all(Radius.circular(80)),
-                                child: Image.network(
+                                borderRadius: const BorderRadius.all(
+                                  Radius.circular(80),
+                                ),
+                                child: Image.asset(
                                   "../assets/images/My1.jpg",
                                   width: 150,
                                   height: 150,
@@ -479,6 +480,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
           child: SingleChildScrollView(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Banners(),
                 Column(
@@ -487,6 +489,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     Padding(
                       padding: const EdgeInsets.only(top: 30.0),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           AnimatedBuilder(
                             animation: _controller,
@@ -495,7 +498,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               return Transform.translate(
                                 offset: const Offset(170, 0),
                                 child: Transform.rotate(
-                                  angle: _controller.value * 2 * pi / 2,
+                                  angle: _controller.value * 2 * pi,
                                   child: child,
                                 ),
                               );
@@ -504,9 +507,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           Padding(
                             padding: const EdgeInsets.all(10.0),
                             child: ClipRRect(
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(80)),
-                              child: Image.network(
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(80),
+                              ),
+                              child: Image.asset(
                                 "../assets/images/My1.jpg",
                                 width: 150,
                                 height: 150,

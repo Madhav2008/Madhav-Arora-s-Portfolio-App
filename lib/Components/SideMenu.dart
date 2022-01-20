@@ -97,7 +97,7 @@ class SideMenu extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 30,
-                backgroundImage: NetworkImage(urlImage),
+                backgroundImage: AssetImage(urlImage),
               ),
               const SizedBox(width: 20),
               Column(

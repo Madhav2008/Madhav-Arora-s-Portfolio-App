@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
-import 'package:madhav_arora_portfolio/Screens/My%20Projects/My_Projects.dart';
+import 'package:madhav_arora_portfolio/Screens/Profile%20Screen/Profile_Screen.dart';
 
 class Banners extends StatelessWidget {
   const Banners({
@@ -20,7 +20,9 @@ class Banners extends StatelessWidget {
             "../assets/images/bg.jpeg",
             fit: BoxFit.cover,
           ),
-          // Container(color: secondary),
+          Container(
+            color: primary.withOpacity(0.5),
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
@@ -40,7 +42,7 @@ class Banners extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const MyProjects(),
+                        builder: (context) => const ProfileScreen(),
                       ),
                     );
                   },
