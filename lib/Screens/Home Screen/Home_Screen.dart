@@ -1,5 +1,7 @@
 // ignore_for_file: file_names, avoid_web_libraries_in_flutter
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:madhav_arora_portfolio/Components/Colourful_Animated_Back.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
@@ -33,15 +35,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     html.window.open(url, '_blank');
   }
 
-  // String desc =
-  //     "Experienced App Developer (Native/Hybrid) with over 2 years of experience in App Development working on my own projects and freelancing and 5 months plus in Flutter.";
   String desc =
       "“You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity.”";
 
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 1),
     vsync: this,
-  );
+  )..repeat();
 
   @override
   void dispose() {
@@ -91,30 +91,38 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const SizedBox(
-                    height: 40,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30.0),
+                    child: Row(
+                      children: [
+                        AnimatedBuilder(
+                          animation: _controller,
+                          child: const Colourful(),
+                          builder: (BuildContext context, Widget? child) {
+                            return Transform.translate(
+                              offset: const Offset(170, 0),
+                              child: Transform.rotate(
+                                angle: _controller.value * 2 * pi / 2,
+                                child: child,
+                              ),
+                            );
+                          },
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: ClipRRect(
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(80)),
+                            child: Image.network(
+                              "../assets/images/My1.jpg",
+                              width: 150,
+                              height: 150,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  AnimatedBuilder(
-                    animation: _controller,
-                    child: const Colourful(),
-                    builder: (BuildContext context, Widget? child) {
-                      return Transform.rotate(
-                        angle: _controller.value * 6.5,
-                        child: child,
-                      );
-                    },
-                  ),
-                  // Padding(
-                  //   padding: const EdgeInsets.all(10.0),
-                  //   child: ClipRRect(
-                  //     borderRadius: const BorderRadius.all(Radius.circular(80)),
-                  //     child: Image.network(
-                  //       "../assets/images/My1.jpg",
-                  //       width: 150,
-                  //       height: 150,
-                  //     ),
-                  //   ),
-                  // ),
                   const SizedBox(
                     height: 12,
                   ),
@@ -235,50 +243,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ),
                     ),
                   ),
-                ],
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              const Divider(
-                color: text,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const Text(
-                "My Skills",
-                style: TextStyle(
-                  color: text,
-                  fontSize: 25,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: 1,
-                ),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  gradient: const LinearGradient(
-                    colors: [
-                      secondary,
-                      primary,
-                    ],
+                  const SizedBox(
+                    height: 50,
                   ),
-                ),
-                child: Column(
-                  children: const [
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Skills(),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 50,
+                ],
               ),
             ],
           ),
