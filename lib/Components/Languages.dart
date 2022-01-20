@@ -137,10 +137,8 @@ class _LanguagesState extends State<Languages> {
           height: 25,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const SizedBox(
-              width: 14,
-            ),
             Column(
               children: [
                 CircularPercentIndicator(
@@ -162,10 +160,10 @@ class _LanguagesState extends State<Languages> {
                   height: 15,
                 ),
                 const Text(
-                  '  Jupyter \nNotebook',
+                  '  Jupiter\nNotebook',
                   style: TextStyle(
                     color: text,
-                    fontSize: 17,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
                   ),
@@ -173,7 +171,7 @@ class _LanguagesState extends State<Languages> {
               ],
             ),
             const SizedBox(
-              width: 22,
+              width: 14,
             ),
             Column(
               children: [
@@ -207,7 +205,7 @@ class _LanguagesState extends State<Languages> {
               ],
             ),
             const SizedBox(
-              width: 22,
+              width: 14,
             ),
             Column(
               children: [
@@ -237,13 +235,13 @@ class _LanguagesState extends State<Languages> {
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
                   ),
-                ),
+                )
               ],
             ),
           ],
         ),
         const SizedBox(
-          height: 20,
+          height: 25,
         ),
       ],
     );

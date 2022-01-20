@@ -46,9 +46,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   height: 20,
                 ),
                 CircleAvatar(
-                  radius: 60,
-                  backgroundImage: NetworkImage(
-                    "https://avatars.githubusercontent.com/u/72864817?s=400&u=2f8a4bd2f1f03f4f6ad73c61abfc5770afd1e135&v=4",
+                  radius: 75,
+                  backgroundImage: AssetImage(
+                    "../assets/images/My.png",
                   ),
                 ),
                 SizedBox(
@@ -57,7 +57,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Text(
                   'Madhav Arora',
                   style: TextStyle(
-                    fontSize: 27,
+                    fontSize: 32,
                     color: text,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 3,

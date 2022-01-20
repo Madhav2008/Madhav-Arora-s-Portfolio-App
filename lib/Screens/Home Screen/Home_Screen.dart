@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, avoid_web_libraries_in_flutter
 
 import 'package:flutter/material.dart';
+import 'package:madhav_arora_portfolio/Components/Colourful_Animated_Back.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
 import 'package:madhav_arora_portfolio/Components/Banner.dart';
 import 'package:madhav_arora_portfolio/Components/SideMenu.dart';
@@ -15,7 +16,7 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   void github() {
     String url = 'https://github.com/Madhav2008';
     html.window.open(url, '_blank');
@@ -36,6 +37,18 @@ class _HomeScreenState extends State<HomeScreen> {
   //     "Experienced App Developer (Native/Hybrid) with over 2 years of experience in App Development working on my own projects and freelancing and 5 months plus in Flutter.";
   String desc =
       "“You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity.”";
+
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 1),
+    vsync: this,
+  );
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,14 +94,27 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(
                     height: 40,
                   ),
-                  ClipRRect(
-                    borderRadius: const BorderRadius.all(Radius.circular(80)),
-                    child: Image.network(
-                      "../assets/images/My1.jpg",
-                      width: 150,
-                      height: 150,
-                    ),
+                  AnimatedBuilder(
+                    animation: _controller,
+                    child: const Colourful(),
+                    builder: (BuildContext context, Widget? child) {
+                      return Transform.rotate(
+                        angle: _controller.value * 6.5,
+                        child: child,
+                      );
+                    },
                   ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(10.0),
+                  //   child: ClipRRect(
+                  //     borderRadius: const BorderRadius.all(Radius.circular(80)),
+                  //     child: Image.network(
+                  //       "../assets/images/My1.jpg",
+                  //       width: 150,
+                  //       height: 150,
+                  //     ),
+                  //   ),
+                  // ),
                   const SizedBox(
                     height: 12,
                   ),
@@ -137,8 +163,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           onTap: () async {
                             linkedin();
                           },
-                          child: Image.network(
-                            "https://raw.githubusercontent.com/Madhav2008/Social-Media-Icons/main/linkedin.png",
+                          child: Image.asset(
+                            "../assets/images/linkedin.png",
                             width: 23,
                             height: 23,
                           ),
@@ -153,8 +179,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           onTap: () async {
                             github();
                           },
-                          child: Image.network(
-                            "https://raw.githubusercontent.com/Madhav2008/Social-Media-Icons/main/github_2048_black.png",
+                          child: Image.asset(
+                            "../assets/images/github.png",
                             width: 35,
                             height: 35,
                             color: text,
@@ -170,8 +196,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           onTap: () async {
                             gmail();
                           },
-                          child: Image.network(
-                            "https://raw.githubusercontent.com/Madhav2008/Social-Media-Icons/main/gmail-new-icon-2-removebg-preview.png",
+                          child: Image.asset(
+                            "../assets/images/gmail.png",
                             width: 35,
                             height: 35,
                           ),

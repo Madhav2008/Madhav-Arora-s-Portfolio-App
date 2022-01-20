@@ -31,17 +31,15 @@ class _FrameworksState extends State<Frameworks> {
           height: 40,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const SizedBox(
-              width: 14,
-            ),
             Column(
               children: [
                 CircularPercentIndicator(
                   progressColor: highlighted,
                   backgroundColor: primary,
                   percent: 0.90,
-                  radius: 80,
+                  radius: 90,
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
@@ -53,13 +51,13 @@ class _FrameworksState extends State<Frameworks> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 const Text(
                   'React Native',
                   style: TextStyle(
                     color: text,
-                    fontSize: 15,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
                   ),
@@ -75,7 +73,7 @@ class _FrameworksState extends State<Frameworks> {
                   progressColor: highlighted,
                   backgroundColor: primary,
                   percent: 0.87,
-                  radius: 80,
+                  radius: 90,
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
@@ -87,13 +85,13 @@ class _FrameworksState extends State<Frameworks> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 const Text(
                   'Flutter',
                   style: TextStyle(
                     color: text,
-                    fontSize: 18,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
                   ),
@@ -109,7 +107,7 @@ class _FrameworksState extends State<Frameworks> {
                   progressColor: highlighted,
                   backgroundColor: primary,
                   percent: 0.75,
-                  radius: 80,
+                  radius: 90,
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
@@ -121,13 +119,13 @@ class _FrameworksState extends State<Frameworks> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 const Text(
                   'Django',
                   style: TextStyle(
                     color: text,
-                    fontSize: 18,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
                   ),
@@ -137,7 +135,7 @@ class _FrameworksState extends State<Frameworks> {
           ],
         ),
         const SizedBox(
-          height: 20,
+          height: 25,
         ),
       ],
     );
