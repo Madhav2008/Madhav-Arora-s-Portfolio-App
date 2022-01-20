@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
+import 'package:madhav_arora_portfolio/Screens/My%20Projects/My_Projects.dart';
 
 class Banners extends StatelessWidget {
   const Banners({
@@ -36,7 +37,13 @@ class Banners extends StatelessWidget {
                 ),
                 const SizedBox(height: 40),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const MyProjects(),
+                      ),
+                    );
+                  },
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 20 * 2,

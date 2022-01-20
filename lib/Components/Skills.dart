@@ -20,17 +20,20 @@ class _SkillsState extends State<Skills> {
     return Center(
       child: Column(
         children: [
+          const SizedBox(
+            height: 30,
+          ),
           const Text(
-            'My Skills',
+            'What I Know ??',
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 30,
               color: text,
               letterSpacing: 2,
               fontWeight: FontWeight.bold,
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 30,
           ),
           Center(
             child: Column(

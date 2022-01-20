@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
-import 'package:madhav_arora_portfolio/Components/About.dart';
 import 'package:madhav_arora_portfolio/Components/Profile.dart';
-import 'package:madhav_arora_portfolio/Components/Skills.dart';
+import 'package:madhav_arora_portfolio/Screens/My%20Projects/My_Projects.dart';
 import 'package:madhav_arora_portfolio/Screens/Profile%20Screen/Profile_Screen.dart';
+import 'package:madhav_arora_portfolio/Screens/Skills%20Screen/Skill_Screen.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -16,71 +16,68 @@ class SideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: backgroundColor,
-      child: SafeArea(
-        child: Column(
-          children: [
-            MouseRegion(
-              cursor: SystemMouseCursors.click,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (BuildContext context) => const ProfileScreen(),
+      child: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: [
+              MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            const ProfileScreen(),
+                      ),
+                    );
+                  },
+                  child: const Profile(),
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 12),
+                    buildMenuItem(
+                      text: 'My Profile',
+                      icon: Icons.account_circle_sharp,
+                      onClicked: () => selectedItem(context, 0),
                     ),
-                  );
-                },
-                child: const Profile(),
+                    const SizedBox(height: 16),
+                    buildMenuItem(
+                      text: 'My Skills',
+                      icon: Icons.accessibility_new_sharp,
+                      onClicked: () => selectedItem(context, 1),
+                    ),
+                    const SizedBox(height: 16),
+                    buildMenuItem(
+                      text: 'My Projects',
+                      icon: Icons.assignment,
+                      onClicked: () => selectedItem(context, 2),
+                    ),
+                    const SizedBox(height: 24),
+                    const Divider(color: Colors.white70),
+                    const SizedBox(height: 24),
+                    buildMenuItem(
+                      text: 'Timetable',
+                      icon: Icons.date_range_outlined,
+                      onClicked: () => selectedItem(context, 3),
+                    ),
+                    const SizedBox(height: 16),
+                    buildMenuItem(
+                      text: "Madhav Arora's Profile",
+                      icon: Icons.account_circle_sharp,
+                      onClicked: () => selectedItem(context, 4),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: Column(
-                children: [
-                  const SizedBox(height: 12),
-                  buildMenuItem(
-                    text: 'Take Quiz',
-                    icon: Icons.timer,
-                    onClicked: () => selectedItem(context, 0),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Assignments',
-                    icon: Icons.assignment_outlined,
-                    onClicked: () => selectedItem(context, 1),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Fees',
-                    icon: Icons.monetization_on_outlined,
-                    onClicked: () => selectedItem(context, 2),
-                  ),
-                  const SizedBox(height: 24),
-                  const Divider(color: Colors.white70),
-                  const SizedBox(height: 24),
-                  buildMenuItem(
-                    text: 'Timetable',
-                    icon: Icons.date_range_outlined,
-                    onClicked: () => selectedItem(context, 3),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Notifications',
-                    icon: Icons.notifications_active_outlined,
-                    onClicked: () => selectedItem(context, 4),
-                  ),
-                  buildMenuItem(
-                    text: "FAQ'S",
-                    icon: Icons.question_answer,
-                    onClicked: () => selectedItem(context, 5),
-                  ),
-                  const SizedBox(height: 16),
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -164,14 +161,14 @@ class SideMenu extends StatelessWidget {
       case 1:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const ProfileScreen(),
+            builder: (context) => const SkillsScreen(),
           ),
         );
         break;
       case 2:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const ProfileScreen(),
+            builder: (context) => const MyProjects(),
           ),
         );
         break;
