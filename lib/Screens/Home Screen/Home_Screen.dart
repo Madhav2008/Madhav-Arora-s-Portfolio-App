@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, avoid_web_libraries_in_flutter, deprecated_member_use
+// ignore_for_file: file_names, avoid_web_libraries_in_flutter, deprecated_member_use, unused_local_variable
 
 import 'dart:math';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -7,7 +7,6 @@ import 'package:madhav_arora_portfolio/Components/Colourful_Animated_Back.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
 import 'package:madhav_arora_portfolio/Components/Banner.dart';
 import 'package:madhav_arora_portfolio/Components/SideMenu.dart';
-import 'package:madhav_arora_portfolio/Screens/Profile%20Screen/Profile_Screen.dart';
 import 'package:share/share.dart';
 import 'dart:html' as html;
 import 'package:shimmer/shimmer.dart';
@@ -363,8 +362,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               ),
                               gradient: LinearGradient(
                                 colors: [
-                                  secondary,
-                                  primary,
+                                  Colors.red,
+                                  Colors.pink,
+                                  Colors.red,
+                                  Colors.pinkAccent,
                                 ],
                               ),
                             ),
@@ -525,6 +526,29 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ColorizeAnimatedTextKit(
                       text: const [
                         "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
+                        "Madhav Arora",
                       ],
                       colors: const [
                         Colors.red,
@@ -638,8 +662,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                         gradient: LinearGradient(
                           colors: [
-                            secondary,
-                            primary,
+                            Colors.red,
+                            Colors.pink,
                           ],
                         ),
                       ),
@@ -672,9 +696,7 @@ void onSelected(BuildContext context, int item) {
       );
       break;
     case 1:
-      Navigator.of(context).pushAndRemoveUntil(
-        MaterialPageRoute(builder: (context) => const ProfileScreen()),
-        (route) => false,
-      );
+      bool willLeave;
+      Navigator.of(context).pop(willLeave = true);
   }
 }
