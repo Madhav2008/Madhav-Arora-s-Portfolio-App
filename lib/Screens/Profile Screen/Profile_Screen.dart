@@ -6,7 +6,7 @@ import 'package:madhav_arora_portfolio/Components/Skills.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
 
 class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  ProfileScreen({Key? key}) : super(key: key);
 
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
