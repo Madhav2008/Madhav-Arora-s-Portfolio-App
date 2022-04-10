@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         splash: Image.asset(
           '../assets/images/My2_MA.png',
         ),
-        nextScreen: const HomeScreen(),
+        nextScreen: HomeScreen(),
         splashTransition: SplashTransition.decoratedBoxTransition,
         backgroundColor: Colors.black,
         duration: 3000,
