@@ -14,7 +14,7 @@ class _AboutState extends State<About> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      padding: EdgeInsets.symmetric(horizontal: 25.0),
       child: Column(
         children: [
           Row(
