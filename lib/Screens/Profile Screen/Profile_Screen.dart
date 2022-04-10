@@ -18,7 +18,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: backgroundColor,
-        title: const Text(
+        title: Text(
           "Madhav Arora's Profile",
           style: TextStyle(
             fontSize: 20,
