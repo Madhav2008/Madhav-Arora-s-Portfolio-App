@@ -67,7 +67,7 @@ class _AboutState extends State<About> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               Text(
                 'Age : ',
                 style: TextStyle(
