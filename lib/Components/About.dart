@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
 
 class About extends StatefulWidget {
-  const About({Key? key}) : super(key: key);
+  About({Key? key}) : super(key: key);
 
   @override
   _AboutState createState() => _AboutState();
