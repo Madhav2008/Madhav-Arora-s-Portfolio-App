@@ -4,7 +4,7 @@ import 'Screens/Home Screen/Home_Screen.dart';
 
 void main() {
   runApp(
-    const MyApp(),
+    MyApp(),
   );
 }
 
