@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 class AnimatedCounter extends StatelessWidget {
-  const AnimatedCounter({
+  AnimatedCounter({
     Key? key,
     required this.value,
     this.text,
