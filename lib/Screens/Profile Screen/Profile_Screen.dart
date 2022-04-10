@@ -41,7 +41,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: SingleChildScrollView(
           child: Center(
             child: Column(
-              children: const [
+              children: [
                 SizedBox(
                   height: 20,
                 ),
