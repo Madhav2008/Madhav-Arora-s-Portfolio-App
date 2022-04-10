@@ -30,7 +30,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         centerTitle: true,
       ),
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
               primary,
