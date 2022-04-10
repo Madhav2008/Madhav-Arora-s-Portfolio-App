@@ -16,7 +16,7 @@ class AnimatedCounter extends StatelessWidget {
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
       tween: IntTween(begin: 0, end: value),
-      duration: const Duration(seconds: 2),
+      duration: Duration(seconds: 2),
       builder: (context, value, child) => Text(
         "$value$text",
         style: const TextStyle(
