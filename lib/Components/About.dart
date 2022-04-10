@@ -86,7 +86,7 @@ class _AboutState extends State<About> {
               ),
             ],
           ),
-          const SizedBox(
+          SizedBox(
             height: 50,
           ),
         ],
