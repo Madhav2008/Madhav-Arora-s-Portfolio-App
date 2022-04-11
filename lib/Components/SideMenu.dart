@@ -130,7 +130,7 @@ class SideMenu extends StatelessWidget {
     required IconData icon,
     VoidCallback? onClicked,
   }) {
-    final color = Colors.white;
+    const color = Colors.white;
 
     return ListTile(
       leading: Icon(
