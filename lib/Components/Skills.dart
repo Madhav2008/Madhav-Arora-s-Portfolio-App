@@ -7,7 +7,7 @@ import 'package:madhav_arora_portfolio/Components/Languages.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
 
 class Skills extends StatefulWidget {
-  const Skills({Key? key}) : super(key: key);
+  Skills({Key? key}) : super(key: key);
 
   @override
   _SkillsState createState() => _SkillsState();
@@ -20,10 +20,10 @@ class _SkillsState extends State<Skills> {
     return Center(
       child: Column(
         children: [
-          const SizedBox(
+          SizedBox(
             height: 30,
           ),
-          const Text(
+          Text(
             'What I Know ??',
             style: TextStyle(
               fontSize: 30,
@@ -32,12 +32,12 @@ class _SkillsState extends State<Skills> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(
+          SizedBox(
             height: 30,
           ),
           Center(
             child: Column(
-              children: const [
+              children: [
                 Languages(),
                 Frameworks(),
                 Databases(),
