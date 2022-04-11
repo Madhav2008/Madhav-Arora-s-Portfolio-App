@@ -5,13 +5,13 @@ import 'package:madhav_arora_portfolio/Components/Skills.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
 
 class SkillsScreen extends StatelessWidget {
-  const SkillsScreen({Key? key}) : super(key: key);
+  SkillsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           "My Skills",
           style: TextStyle(
             fontSize: 25,
@@ -24,7 +24,7 @@ class SkillsScreen extends StatelessWidget {
         backgroundColor: backgroundColor,
       ),
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
               primary,
@@ -34,7 +34,7 @@ class SkillsScreen extends StatelessWidget {
         ),
         child: SingleChildScrollView(
           child: Column(
-            children: const [
+            children: [
               Skills(),
             ],
           ),
