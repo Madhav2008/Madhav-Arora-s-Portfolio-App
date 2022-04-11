@@ -7,7 +7,7 @@ import 'Animated_Counter.dart';
 import 'highlight.dart';
 
 class Databases extends StatefulWidget {
-  const Databases({Key? key}) : super(key: key);
+  Databases({Key? key}) : super(key: key);
 
   @override
   _DatabasesState createState() => _DatabasesState();
@@ -18,7 +18,7 @@ class _DatabasesState extends State<Databases> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text(
+        Text(
           'Databases',
           style: TextStyle(
             fontSize: 27,
@@ -26,7 +26,7 @@ class _DatabasesState extends State<Databases> {
             letterSpacing: 2,
           ),
         ),
-        const SizedBox(
+        SizedBox(
           height: 40,
         ),
         Row(
@@ -42,17 +42,17 @@ class _DatabasesState extends State<Databases> {
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
-                  center: const HeighLight(
+                  center: HeighLight(
                     counter: AnimatedCounter(
                       value: 88,
                       text: "%",
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   'Firebase',
                   style: TextStyle(
                     color: text,
