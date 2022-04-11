@@ -8,7 +8,7 @@ import 'Animated_Counter.dart';
 import 'highlight.dart';
 
 class Frameworks extends StatefulWidget {
-  const Frameworks({Key? key}) : super(key: key);
+  Frameworks({Key? key}) : super(key: key);
 
   @override
   _FrameworksState createState() => _FrameworksState();
@@ -19,7 +19,7 @@ class _FrameworksState extends State<Frameworks> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text(
+        Text(
           'Frameworks',
           style: TextStyle(
             fontSize: 27,
@@ -27,7 +27,7 @@ class _FrameworksState extends State<Frameworks> {
             letterSpacing: 2,
           ),
         ),
-        const SizedBox(
+        SizedBox(
           height: 40,
         ),
         Row(
@@ -43,17 +43,17 @@ class _FrameworksState extends State<Frameworks> {
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
-                  center: const HeighLight(
+                  center: HeighLight(
                     counter: AnimatedCounter(
                       value: 90,
                       text: "%",
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   'React Native',
                   style: TextStyle(
                     color: text,
@@ -64,7 +64,7 @@ class _FrameworksState extends State<Frameworks> {
                 )
               ],
             ),
-            const SizedBox(
+            SizedBox(
               width: 14,
             ),
             Column(
@@ -77,17 +77,17 @@ class _FrameworksState extends State<Frameworks> {
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
-                  center: const HeighLight(
+                  center: HeighLight(
                     counter: AnimatedCounter(
                       value: 87,
                       text: "%",
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   'Flutter',
                   style: TextStyle(
                     color: text,
@@ -98,7 +98,7 @@ class _FrameworksState extends State<Frameworks> {
                 )
               ],
             ),
-            const SizedBox(
+            SizedBox(
               width: 14,
             ),
             Column(
@@ -111,17 +111,17 @@ class _FrameworksState extends State<Frameworks> {
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
-                  center: const HeighLight(
+                  center: HeighLight(
                     counter: AnimatedCounter(
                       value: 75,
                       text: "%",
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   'Django',
                   style: TextStyle(
                     color: text,
@@ -134,7 +134,7 @@ class _FrameworksState extends State<Frameworks> {
             ),
           ],
         ),
-        const SizedBox(
+        SizedBox(
           height: 25,
         ),
       ],
