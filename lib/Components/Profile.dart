@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
 
 class Profile extends StatefulWidget {
-  const Profile({Key? key}) : super(key: key);
+  Profile({Key? key}) : super(key: key);
 
   @override
   _ProfileState createState() => _ProfileState();
@@ -14,12 +14,12 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: primary,
       ),
       width: 305,
       child: Column(
-        children: const [
+        children: [
           SizedBox(
             height: 20,
           ),
