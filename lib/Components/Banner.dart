@@ -39,8 +39,8 @@ class Banners extends StatelessWidget {
                       ),
                 ),
                 SizedBox(height: 20),
-                const Texts(),
-                const SizedBox(height: 20),
+                Texts(),
+                SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
@@ -50,13 +50,13 @@ class Banners extends StatelessWidget {
                     );
                   },
                   style: TextButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(
+                    padding: EdgeInsets.symmetric(
                       horizontal: 20 * 2,
                       vertical: 20,
                     ),
                     backgroundColor: highlighted,
                   ),
-                  child: const Text(
+                  child: Text(
                     "EXPLORE NOW",
                     style: TextStyle(
                       color: primary,
@@ -75,7 +75,7 @@ class Banners extends StatelessWidget {
 }
 
 class Texts extends StatelessWidget {
-  const Texts({
+  Texts({
     Key? key,
   }) : super(key: key);
 
@@ -85,7 +85,7 @@ class Texts extends StatelessWidget {
       style: Theme.of(context).textTheme.subtitle1!,
       maxLines: 1,
       child: Row(
-        children: const [
+        children: [
           Text(
             "<Madhav>",
             style: TextStyle(
@@ -127,7 +127,7 @@ class Texts extends StatelessWidget {
 }
 
 class AnimatedText extends StatelessWidget {
-  const AnimatedText({
+  AnimatedText({
     Key? key,
   }) : super(key: key);
 
@@ -137,134 +137,134 @@ class AnimatedText extends StatelessWidget {
       animatedTexts: [
         TypewriterAnimatedText(
           "Devloper.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
         TypewriterAnimatedText(
           "Designer.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
         TypewriterAnimatedText(
           "Coder.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
         TypewriterAnimatedText(
           "Learner.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
         TypewriterAnimatedText(
           "Devloper.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
         TypewriterAnimatedText(
           "Designer.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
         TypewriterAnimatedText(
           "Coder.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
         TypewriterAnimatedText(
           "Learner.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
         TypewriterAnimatedText(
           "Devloper.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
         TypewriterAnimatedText(
           "Designer.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
         TypewriterAnimatedText(
           "Coder.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
         TypewriterAnimatedText(
           "Learner.",
-          textStyle: const TextStyle(
+          textStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: highlighted,
             letterSpacing: 1,
           ),
-          speed: const Duration(milliseconds: 200),
+          speed: Duration(milliseconds: 200),
           cursor: '',
         ),
       ],
