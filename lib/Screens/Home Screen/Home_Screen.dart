@@ -12,7 +12,7 @@ import 'dart:html' as html;
 import 'package:shimmer/shimmer.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  HomeScreen({Key? key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   bool isLoading = false;
 
   late final AnimationController _controller = AnimationController(
-    duration: const Duration(seconds: 1),
+    duration: Duration(seconds: 1),
     vsync: this,
   )..repeat();
 
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       isLoading = true;
     });
 
-    await Future.delayed(const Duration(seconds: 2), () {});
+    await Future.delayed(Duration(seconds: 2), () {});
 
     setState(() {
       isLoading = false;
@@ -76,17 +76,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         await showDialog(
           context: context,
           builder: (_) => AlertDialog(
-            title: const Text('Are you sure?'),
-            content: const Text('Do you really want to exit the app'),
+            title: Text('Are you sure?'),
+            content: Text('Do you really want to exit the app'),
             actions: [
               ElevatedButton(
                 onPressed: () => Navigator.of(context).pop(willLeave = true),
-                child: const Text("Yes"),
+                child: Text("Yes"),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16),
               FlatButton(
                 onPressed: () => Navigator.of(context).pop(willLeave = false),
-                child: const Text("No"),
+                child: Text("No"),
               ),
             ],
           ),
@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: backgroundColor,
-          title: const Text(
+          title: Text(
             "Madhav Arora's Portfolio",
             style: TextStyle(
               fontSize: 20,
@@ -111,15 +111,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
-              icon: const Icon(Icons.menu),
+              icon: Icon(Icons.menu),
             ),
           ),
           actions: [
             Theme(
               data: Theme.of(context).copyWith(
                 dividerColor: Colors.white,
-                iconTheme: const IconThemeData(color: Colors.white),
-                textTheme: const TextTheme().apply(bodyColor: Colors.white),
+                iconTheme: IconThemeData(color: Colors.white),
+                textTheme: TextTheme().apply(bodyColor: Colors.white),
               ),
               child: PopupMenuButton<int>(
                 color: backgroundColor,
@@ -128,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   PopupMenuItem<int>(
                     value: 0,
                     child: Row(
-                      children: const [
+                      children: [
                         Icon(Icons.share),
                         SizedBox(width: 12),
                         Text(
@@ -143,11 +143,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ],
                     ),
                   ),
-                  const PopupMenuDivider(),
+                  PopupMenuDivider(),
                   PopupMenuItem<int>(
                     value: 1,
                     child: Row(
-                      children: const [
+                      children: [
                         Icon(Icons.logout),
                         SizedBox(width: 12),
                         Text(
@@ -167,10 +167,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
           ],
         ),
-        drawer: const SideMenu(),
+        drawer: SideMenu(),
         body: Container(
           alignment: Alignment.center,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
                 primary,
@@ -184,25 +184,25 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 Shimmer.fromColors(
                   baseColor: Colors.grey.shade500,
                   highlightColor: Colors.grey.shade100,
-                  child: const Banners(),
+                  child: Banners(),
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Shimmer.fromColors(
-                      period: const Duration(seconds: 1),
+                      period: Duration(seconds: 1),
                       baseColor: Colors.grey.shade500,
                       highlightColor: Colors.grey.shade100,
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 30.0),
+                        padding: EdgeInsets.only(top: 30.0),
                         child: Row(
                           children: [
                             AnimatedBuilder(
                               animation: _controller,
-                              child: const Colourful(),
+                              child: Colourful(),
                               builder: (BuildContext context, Widget? child) {
                                 return Transform.translate(
-                                  offset: const Offset(170, 0),
+                                  offset: Offset(170, 0),
                                   child: Transform.rotate(
                                     angle: _controller.value * 2,
                                     child: child,
@@ -211,9 +211,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               },
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(10.0),
+                              padding: EdgeInsets.all(10.0),
                               child: ClipRRect(
-                                borderRadius: const BorderRadius.all(
+                                borderRadius: BorderRadius.all(
                                   Radius.circular(80),
                                 ),
                                 child: Image.asset(
@@ -227,13 +227,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 12,
                     ),
                     Shimmer.fromColors(
                       baseColor: Colors.grey.shade500,
                       highlightColor: Colors.grey.shade100,
-                      child: const Text(
+                      child: Text(
                         "Madhav Arora",
                         style: TextStyle(
                           color: text,
@@ -242,18 +242,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 13,
                     ),
                     Shimmer.fromColors(
                       baseColor: Colors.grey.shade500,
                       highlightColor: Colors.grey.shade100,
                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        padding: EdgeInsets.symmetric(horizontal: 50),
                         child: Text(
                           desc,
                           textAlign: TextAlign.center,
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: 16,
                             color: lightText,
                             fontWeight: FontWeight.w300,
@@ -261,13 +261,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 20,
                     ),
                     Shimmer.fromColors(
                       baseColor: Colors.grey.shade500,
                       highlightColor: Colors.grey.shade100,
-                      child: const Text(
+                      child: Text(
                         "Connect with me",
                         style: TextStyle(
                           color: text,
@@ -275,7 +275,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -298,7 +298,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             ),
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 16,
                         ),
                         Shimmer.fromColors(
@@ -319,7 +319,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             ),
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 16,
                         ),
                         Shimmer.fromColors(
@@ -341,7 +341,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 30,
                     ),
                     Shimmer.fromColors(
@@ -352,11 +352,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         child: GestureDetector(
                           onTap: () {},
                           child: Container(
-                            padding: const EdgeInsets.symmetric(
+                            padding: EdgeInsets.symmetric(
                               horizontal: 24,
                               vertical: 12,
                             ),
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(
                                 Radius.circular(30),
                               ),
@@ -369,7 +369,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 ],
                               ),
                             ),
-                            child: const Text(
+                            child: Text(
                               "Download My Resume",
                               style: TextStyle(color: text),
                             ),
@@ -377,7 +377,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 50,
                     ),
                   ],
@@ -398,7 +398,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       return Scaffold(
         appBar: AppBar(
           backgroundColor: backgroundColor,
-          title: const Text(
+          title: Text(
             "Madhav Arora's Portfolio",
             style: TextStyle(
               fontSize: 20,
@@ -413,15 +413,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
-              icon: const Icon(Icons.menu),
+              icon: Icon(Icons.menu),
             ),
           ),
           actions: [
             Theme(
               data: Theme.of(context).copyWith(
                 dividerColor: Colors.white,
-                iconTheme: const IconThemeData(color: Colors.white),
-                textTheme: const TextTheme().apply(bodyColor: Colors.white),
+                iconTheme: IconThemeData(color: Colors.white),
+                textTheme: TextTheme().apply(bodyColor: Colors.white),
               ),
               child: PopupMenuButton<int>(
                 color: backgroundColor,
@@ -430,7 +430,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   PopupMenuItem<int>(
                     value: 0,
                     child: Row(
-                      children: const [
+                      children: [
                         Icon(Icons.share),
                         SizedBox(width: 12),
                         Text(
@@ -445,11 +445,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ],
                     ),
                   ),
-                  const PopupMenuDivider(),
+                  PopupMenuDivider(),
                   PopupMenuItem<int>(
                     value: 1,
                     child: Row(
-                      children: const [
+                      children: [
                         Icon(Icons.logout),
                         SizedBox(width: 12),
                         Text(
@@ -469,10 +469,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
           ],
         ),
-        drawer: const SideMenu(),
+        drawer: SideMenu(),
         body: Container(
           alignment: Alignment.center,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
                 primary,
@@ -483,20 +483,20 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const Banners(),
+                Banners(),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.only(top: 30.0),
+                      padding: EdgeInsets.only(top: 30.0),
                       child: Row(
                         children: [
                           AnimatedBuilder(
                             animation: _controller,
-                            child: const Colourful(),
+                            child: Colourful(),
                             builder: (BuildContext context, Widget? child) {
                               return Transform.translate(
-                                offset: const Offset(170, 0),
+                                offset: Offset(170, 0),
                                 child: Transform.rotate(
                                   angle: _controller.value * 2 * pi,
                                   child: child,
@@ -505,9 +505,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             },
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(10.0),
+                            padding: EdgeInsets.all(10.0),
                             child: ClipRRect(
-                              borderRadius: const BorderRadius.all(
+                              borderRadius: BorderRadius.all(
                                 Radius.circular(80),
                               ),
                               child: Image.asset(
@@ -520,11 +520,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ],
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 12,
                     ),
                     ColorizeAnimatedTextKit(
-                      text: const [
+                      text: [
                         "Madhav Arora",
                         "Madhav Arora",
                         "Madhav Arora",
@@ -550,13 +550,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         "Madhav Arora",
                         "Madhav Arora",
                       ],
-                      colors: const [
+                      colors: [
                         Colors.red,
                         Colors.pink,
                         Colors.redAccent,
                         Colors.pinkAccent,
                       ],
-                      textStyle: const TextStyle(
+                      textStyle: TextStyle(
                         color: text,
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -565,32 +565,32 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ),
                   ],
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 13,
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  padding: EdgeInsets.symmetric(horizontal: 50),
                   child: Text(
                     desc,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 16,
                       color: lightText,
                       fontWeight: FontWeight.w300,
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
-                const Text(
+                Text(
                   "Connect with me",
                   style: TextStyle(
                     color: text,
                     fontSize: 14,
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -609,7 +609,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 16,
                     ),
                     MouseRegion(
@@ -626,7 +626,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 16,
                     ),
                     MouseRegion(
@@ -644,7 +644,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ),
                   ],
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 30,
                 ),
                 MouseRegion(
@@ -652,11 +652,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   child: GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: const EdgeInsets.symmetric(
+                      padding: EdgeInsets.symmetric(
                         horizontal: 24,
                         vertical: 12,
                       ),
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(30),
                         ),
@@ -667,14 +667,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           ],
                         ),
                       ),
-                      child: const Text(
+                      child: Text(
                         "Download My Resume",
                         style: TextStyle(color: text),
                       ),
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 50,
                 ),
               ],
