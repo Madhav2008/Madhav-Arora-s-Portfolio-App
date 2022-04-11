@@ -38,7 +38,7 @@ class Banners extends StatelessWidget {
                         fontSize: 27,
                       ),
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20),
                 const Texts(),
                 const SizedBox(height: 20),
                 ElevatedButton(
