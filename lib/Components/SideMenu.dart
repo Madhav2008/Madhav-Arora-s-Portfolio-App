@@ -8,7 +8,7 @@ import 'package:madhav_arora_portfolio/Screens/Profile%20Screen/Profile_Screen.d
 import 'package:madhav_arora_portfolio/Screens/Skills%20Screen/Skill_Screen.dart';
 
 class SideMenu extends StatelessWidget {
-  const SideMenu({
+  SideMenu({
     Key? key,
   }) : super(key: key);
 
@@ -28,11 +28,11 @@ class SideMenu extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            const ProfileScreen(),
+                            ProfileScreen(),
                       ),
                     );
                   },
-                  child: const Profile(),
+                  child: Profile(),
                 ),
               ),
               Container(
@@ -41,33 +41,33 @@ class SideMenu extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    const SizedBox(height: 12),
+                    SizedBox(height: 12),
                     buildMenuItem(
                       text: 'My Profile',
                       icon: Icons.account_circle_sharp,
                       onClicked: () => selectedItem(context, 0),
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
                     buildMenuItem(
                       text: 'My Skills',
                       icon: Icons.accessibility_new_sharp,
                       onClicked: () => selectedItem(context, 1),
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
                     buildMenuItem(
                       text: 'My Projects',
                       icon: Icons.assignment,
                       onClicked: () => selectedItem(context, 2),
                     ),
-                    const SizedBox(height: 24),
-                    const Divider(color: Colors.white70),
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24),
+                    Divider(color: Colors.white70),
+                    SizedBox(height: 24),
                     buildMenuItem(
                       text: 'Timetable',
                       icon: Icons.date_range_outlined,
                       onClicked: () => selectedItem(context, 3),
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
                     buildMenuItem(
                       text: "Madhav Arora's Profile",
                       icon: Icons.account_circle_sharp,
@@ -92,28 +92,28 @@ class SideMenu extends StatelessWidget {
       InkWell(
         onTap: onClicked,
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 40),
+          padding: EdgeInsets.symmetric(vertical: 40),
           child: Row(
             children: [
               CircleAvatar(
                 radius: 30,
                 backgroundImage: AssetImage(urlImage),
               ),
-              const SizedBox(width: 20),
+              SizedBox(width: 20),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     name,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  SizedBox(height: 4),
                   Text(
                     email,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 14,
                       color: Colors.white,
                     ),
@@ -130,7 +130,7 @@ class SideMenu extends StatelessWidget {
     required IconData icon,
     VoidCallback? onClicked,
   }) {
-    const color = Colors.white;
+    color = Colors.white;
 
     return ListTile(
       leading: Icon(
@@ -139,7 +139,7 @@ class SideMenu extends StatelessWidget {
       ),
       title: Text(
         text,
-        style: const TextStyle(
+        style: TextStyle(
           color: color,
         ),
       ),
@@ -154,42 +154,42 @@ class SideMenu extends StatelessWidget {
       case 0:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const ProfileScreen(),
+            builder: (context) => ProfileScreen(),
           ),
         );
         break;
       case 1:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const SkillsScreen(),
+            builder: (context) => SkillsScreen(),
           ),
         );
         break;
       case 2:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const MyProjects(),
+            builder: (context) => MyProjects(),
           ),
         );
         break;
       case 3:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const ProfileScreen(),
+            builder: (context) => ProfileScreen(),
           ),
         );
         break;
       case 4:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const ProfileScreen(),
+            builder: (context) => ProfileScreen(),
           ),
         );
         break;
       case 5:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const ProfileScreen(),
+            builder: (context) => ProfileScreen(),
           ),
         );
         break;
