@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:madhav_arora_portfolio/Constants/Constants.dart';
 
 class MyProjects extends StatelessWidget {
-  const MyProjects({Key? key}) : super(key: key);
+  MyProjects({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           "My Projects",
           style: TextStyle(
             fontSize: 25,
@@ -23,7 +23,7 @@ class MyProjects extends StatelessWidget {
         backgroundColor: backgroundColor,
       ),
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
               primary,
