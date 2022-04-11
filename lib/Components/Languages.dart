@@ -7,7 +7,7 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'highlight.dart';
 
 class Languages extends StatefulWidget {
-  const Languages({Key? key}) : super(key: key);
+  Languages({Key? key}) : super(key: key);
 
   @override
   _LanguagesState createState() => _LanguagesState();
@@ -18,7 +18,7 @@ class _LanguagesState extends State<Languages> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text(
+        Text(
           'Languages',
           style: TextStyle(
             fontSize: 27,
@@ -26,7 +26,7 @@ class _LanguagesState extends State<Languages> {
             letterSpacing: 2,
           ),
         ),
-        const SizedBox(
+        SizedBox(
           height: 40,
         ),
         Row(
@@ -42,17 +42,17 @@ class _LanguagesState extends State<Languages> {
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
-                  center: const HeighLight(
+                  center: HeighLight(
                     counter: AnimatedCounter(
                       value: 85,
                       text: "%",
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   'JavaScript',
                   style: TextStyle(
                     color: text,
@@ -63,7 +63,7 @@ class _LanguagesState extends State<Languages> {
                 )
               ],
             ),
-            const SizedBox(
+            SizedBox(
               width: 14,
             ),
             Column(
@@ -76,17 +76,17 @@ class _LanguagesState extends State<Languages> {
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
-                  center: const HeighLight(
+                  center: HeighLight(
                     counter: AnimatedCounter(
                       value: 95,
                       text: "%",
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   'HTML',
                   style: TextStyle(
                     color: text,
@@ -97,7 +97,7 @@ class _LanguagesState extends State<Languages> {
                 )
               ],
             ),
-            const SizedBox(
+            SizedBox(
               width: 14,
             ),
             Column(
@@ -110,17 +110,17 @@ class _LanguagesState extends State<Languages> {
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
-                  center: const HeighLight(
+                  center: HeighLight(
                     counter: AnimatedCounter(
                       value: 60,
                       text: "%",
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   'Python',
                   style: TextStyle(
                     color: text,
@@ -133,7 +133,7 @@ class _LanguagesState extends State<Languages> {
             ),
           ],
         ),
-        const SizedBox(
+        SizedBox(
           height: 25,
         ),
         Row(
@@ -149,17 +149,17 @@ class _LanguagesState extends State<Languages> {
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
-                  center: const HeighLight(
+                  center: HeighLight(
                     counter: AnimatedCounter(
                       value: 55,
                       text: "%",
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   '  Jupiter\nNotebook',
                   style: TextStyle(
                     color: text,
@@ -170,7 +170,7 @@ class _LanguagesState extends State<Languages> {
                 )
               ],
             ),
-            const SizedBox(
+            SizedBox(
               width: 14,
             ),
             Column(
@@ -183,17 +183,17 @@ class _LanguagesState extends State<Languages> {
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
-                  center: const HeighLight(
+                  center: HeighLight(
                     counter: AnimatedCounter(
                       value: 90,
                       text: "%",
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   'CSS',
                   style: TextStyle(
                     color: text,
@@ -204,7 +204,7 @@ class _LanguagesState extends State<Languages> {
                 )
               ],
             ),
-            const SizedBox(
+            SizedBox(
               width: 14,
             ),
             Column(
@@ -217,17 +217,17 @@ class _LanguagesState extends State<Languages> {
                   animation: true,
                   animationDuration: 2000,
                   circularStrokeCap: CircularStrokeCap.round,
-                  center: const HeighLight(
+                  center: HeighLight(
                     counter: AnimatedCounter(
                       value: 80,
                       text: "%",
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   'Dart',
                   style: TextStyle(
                     color: text,
@@ -240,7 +240,7 @@ class _LanguagesState extends State<Languages> {
             ),
           ],
         ),
-        const SizedBox(
+        SizedBox(
           height: 25,
         ),
       ],
