@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, avoid_web_libraries_in_flutter, deprecated_member_use, unused_local_variable, prefer_const_constructors_in_immutables
+// ignore_for_file: file_names, avoid_web_libraries_in_flutter, deprecated_member_use, unused_local_variable, prefer_const_constructors_in_immutables, prefer_const_constructors
 
 import 'dart:math';
 import 'package:animated_text_kit/animated_text_kit.dart';
