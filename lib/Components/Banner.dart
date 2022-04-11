@@ -45,7 +45,7 @@ class Banners extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const ProfileScreen(),
+                        builder: (context) => ProfileScreen(),
                       ),
                     );
                   },
