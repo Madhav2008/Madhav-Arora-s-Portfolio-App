@@ -6,7 +6,7 @@ import 'package:madhav_arora_portfolio/Constants/Constants.dart';
 import 'package:madhav_arora_portfolio/Screens/Profile%20Screen/Profile_Screen.dart';
 
 class Banners extends StatelessWidget {
-  const Banners({
+  Banners({
     Key? key,
   }) : super(key: key);
 
