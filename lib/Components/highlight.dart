@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HeighLight extends StatelessWidget {
-  const HeighLight({Key? key, required this.counter, this.label})
+  HeighLight({Key? key, required this.counter, this.label})
       : super(key: key);
 
   final Widget counter;
